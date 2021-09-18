@@ -1,0 +1,79 @@
+/* *,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+} */
+
+.main {
+    width: 460px;
+    height: 400px;
+    margin: 5% auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 5px;
+    font-size: 1.8rem;
+    border: darkslategrey;
+    border-radius: 2mm;
+    border-style: solid;
+    /* background-image: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fleverageedu.com%2Fblog%2Fwp-content%2Fuploads%2F2020%2F06%2FMaths-Short-Tricks.jpg&imgrefurl=https%3A%2F%2Fleverageedu.com%2Fblog%2Fshort-maths-tricks%2F&tbnid=mHmcGsRapixnFM&vet=12ahUKEwjBgpasqojzAhVGlBoKHRiCAVEQMygDegUIARDVAQ..i&docid=5FenYPgz1nNsdM&w=1835&h=1146&q=maths%20images&ved=2ahUKEwjBgpasqojzAhVGlBoKHRiCAVEQMygDegUIARDVAQ"); */
+    background-color: cadetblue;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 50px);
+    row-gap: 0mm;
+    border-collapse: collapse;
+    border-spacing: 0mm;
+}
+
+.calculator-grid>button {
+    cursor: pointer;
+    font-size: 3rem;
+    border: 1px, solid aliceblue;
+    outline: none;
+    background-color: aliceblue;
+}
+
+.calculator-grid>button:hover {
+    background-color: darkgoldenrod;
+}
+
+.span-two {
+    grid-column: span 2;
+    color: darkcyan;
+    background-color: darkseagreen;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: aliceblue;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 30px;
+    border: darkslategrey;
+    border-radius: 1.5mm;
+    border-style: solid;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: aliceblue;
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: aliceblue;
+    font-size: 2.5rem;
+}
